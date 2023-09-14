@@ -3,7 +3,7 @@ import React from 'react';
 import styles from '../Home/styles';
 import Fontisto from 'react-native-vector-icons/Fontisto';
 
-const index = () => {
+const HomeScreen = () => {
   return (
     <View>
       <ImageBackground
@@ -24,4 +24,4 @@ const index = () => {
   );
 };
 
-export default index;
+export default HomeScreen;
