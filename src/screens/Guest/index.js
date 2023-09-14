@@ -5,7 +5,7 @@ import styles from './styles'
 const GuestScreen = () => {
   return (
     <View>
- 
+ <Text>hello</Text>
     </View>
   )
 }
