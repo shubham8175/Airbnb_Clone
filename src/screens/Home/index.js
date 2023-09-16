@@ -1,9 +1,10 @@
 import {ImageBackground, TouchableOpacity, Text, View} from 'react-native';
 import React from 'react';
-import styles from '../Home/styles';
+
 import Fontisto from 'react-native-vector-icons/Fontisto';
 import {useNavigation} from '@react-navigation/native';
 import BottomTabNavigator from '../../navigation/BottomTabNavigator';
+import styles from './styles';
 
 const HomeScreen = () => {
   const navigation = useNavigation();
@@ -24,7 +25,6 @@ const HomeScreen = () => {
           <Text style={styles.buttonText}>Explore Nearby Stays</Text>
         </TouchableOpacity>
       </ImageBackground>
-      <BottomTabNavigator/>
     </View>
   );
 };

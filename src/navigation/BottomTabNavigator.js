@@ -1,11 +1,13 @@
 import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import HomeScreen from '../screens/Home';
 import FontAwesome6Brands from 'react-native-vector-icons/FontAwesome6Pro';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import AntDesign from 'react-native-vector-icons/AntDesign';
 import EvilIcons from 'react-native-vector-icons/EvilIcons';
+import DestinationSearchScreen from '../Screens/DestinationSearch';
+import HomeScreen from '../Screens/Home';
+
 
 const Tab = createBottomTabNavigator();
 const BottomTabNavigator = () => {
@@ -39,7 +41,7 @@ const BottomTabNavigator = () => {
           ),
         }}
         name="Saved"
-        component={HomeScreen}
+        component={DestinationSearchScreen}
       />
       <Tab.Screen
         options={{
@@ -52,7 +54,7 @@ const BottomTabNavigator = () => {
           ),
         }}
         name="Inbox"
-        component={HomeScreen}
+        component={DestinationSearchScreen}
       />
       <Tab.Screen
         options={{
@@ -65,7 +67,7 @@ const BottomTabNavigator = () => {
           ),
         }}
         name="Airbnb"
-        component={HomeScreen}
+        component={DestinationSearchScreen}
       />
       <Tab.Screen
         options={{
@@ -78,7 +80,7 @@ const BottomTabNavigator = () => {
           ),
         }}
         name="Profile"
-        component={HomeScreen}
+        component={DestinationSearchScreen}
       />
     </Tab.Navigator>
   );
