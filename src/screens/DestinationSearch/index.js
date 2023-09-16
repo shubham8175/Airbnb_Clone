@@ -1,14 +1,21 @@
-import {View, TextInput, Text, FlatList} from 'react-native';
+import {View, TextInput,Button, TouchableOpacity, Text, FlatList} from 'react-native';
 import React, {useState} from 'react';
 import styles from './styles';
 import search from '../../asset/data/search';
 import Ionicons from 'react-native-vector-icons/Ionicons';
+import {useNavigation} from '@react-navigation/native';
 
 const DestinationSearchScreen = () => {
+  const navigation = useNavigation();
+  const goToGuest = () => {
+    navigation.navigate('GuestScreen');
+  };
+
   const [inputText, setInputText] = useState('');
   return (
     <View style={styles.container}>
       {/* input component */}
+
 
       <TextInput
         style={styles.textInput}
@@ -21,12 +28,14 @@ const DestinationSearchScreen = () => {
       <FlatList
         data={search}
         renderItem={({item}) => (
-          <View style={styles.row}>
-            <View style={styles.iconContainer}>
-              <Ionicons name="location-sharp" size={30} />
+          <TouchableOpacity onPress={goToGuest}>
+            <View style={styles.row}>
+              <View style={styles.iconContainer}>
+                <Ionicons name="location-sharp" size={30} />
+              </View>
+              <Text>{item.description}</Text>
             </View>
-            <Text>{item.description}</Text>
-          </View>
+          </TouchableOpacity>
         )}
       />
     </View>
